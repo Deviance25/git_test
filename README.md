@@ -26,21 +26,13 @@ zf.close()
 ######################################################
 
 ############# Задача по чтению файла #############
-lst = []
-sred = []
-fst = []
-scnd = []
-thr = []
+l = []
+d = {}
 with open("test.txt", 'r') as s:
-    for line in s:
-        lst.extend([line.strip().split(';')])
-for i in lst:
-    sred.extend((int(i[1]))*2)
-    fst.extend([int(i[1])])
-    scnd.extend([int(i[2])])
-    thr.extend([int(i[3])])
-f = open("1.txt", "w+")
-for i in sred:
-    print (i, file = f)
-print ((sum(fst)/len(fst)), (sum(scnd)/len(scnd)), (sum(thr)/len(thr)), file = f)
+    for i in s:
+        l.extend([i.strip().split(';')])
+#print(l)
+for i in l:
+    d[i[0]] = i[1:]
+#print(d)
 
