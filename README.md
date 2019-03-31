@@ -31,5 +31,6 @@ with open("test.txt", 'r') as s:
 #print(l)
 for i in l:
     d[i[0]] = i[1:]
-#print(d)
+for i in d:
+    print(d.get(i))
 
